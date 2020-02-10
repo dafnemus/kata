@@ -1,6 +1,7 @@
-function objectEqual(objectOne, objectTwo){
-  let keysOne = Object.keys(objectOne);
-  let keysTwo = Object.keys(objectTwo);
+function objectEqual(objectOne, objectTwo) {
+  
+  const keysOne = Object.keys(objectOne);
+  const keysTwo = Object.keys(objectTwo);
 
   if(keysOne.length === keysTwo.length) {
     let equal;
@@ -19,9 +20,11 @@ function objectEqual(objectOne, objectTwo){
       };
   
     };
-      console.log(equal);
+    
+    console.log(equal);
   } else{
-      return 'no son iguales'
+      console.log( 'no son iguales')
+      
   };
 };
 
@@ -29,9 +32,12 @@ const object1= {
     name: 'Kike',
     age: '25'
 }
-const object2 = {
-    name: 'Batu',
-    age: '?'
+
+const object2= {
+    name: 'Kike',
+    age: '25',
+    nacionality: 'colombia'
 }
 
 objectEqual(object1, object2);
+
