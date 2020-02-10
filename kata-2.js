@@ -1,12 +1,21 @@
-function fechaActual(){
-    let fecha = new Date();
-    let dia = fecha.getDate();
-    let mes = fecha.getMonth() + 1;
-    let año = fecha.getFullYear();
+function dateNow(){
+  let date = new Date();
+  let day = date.getDate();
+  let month = date.getMonth() + 1;
+  let year = date.getFullYear();
+  
+  if(day < 10) day= '0' + day;
 
-    if(dia < 10) dia= '0' + dia;
-
-    if(mes < 10) mes = '0' + mes;
-    
-    return dia + '-' + mes + '-' + año
+  if(month < 10) month = '0' + month;
+  
+  return year + '-' + month + '-' + day
 };
+ 
+function dayEndYear(){
+  let dateStart = new Date(dateNow()).getTime();
+  let dateEnd = new Date('2020-12-31').getTime();
+  
+  let dayEndYear = (dateEnd - dateStart) / (1000*60*60*24);
+  
+  return dayEndYear;
+}
