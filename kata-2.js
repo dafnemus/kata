@@ -1,12 +1,13 @@
 function fechaActual(){
-    let fecha = new Date();
-    let dia = fecha.getDate();
-    let mes = fecha.getMonth() + 1;
-    let año = fecha.getFullYear();
+    let date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
 
-    if(dia < 10) dia= '0' + dia;
+    if(day < 10){ day = '0' + day };
 
-    if(mes < 10) mes = '0' + mes;
+    if(month < 10){ month = '0' + month };
     
-    return dia + '-' + mes + '-' + año
+    return day + '-' + month + '-' + year;
+
 };
